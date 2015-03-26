@@ -26,32 +26,59 @@ Ubuntu is one of the most popular Linux distros available, with their Desktop OS
 ## Create an Ubuntu VM
 
 1. In VirtualBox, click ***New*** to open the New Virtual Machine (VM) dialog box.
+
 2. Under **Name and Operating System**:
+
    A. ***Name*** is ```lemon-a100```,
+
    B. ***Type*** is ```Linux```,
+
    C. ***Version*** is ```Ubuntu (64 bit)```,
-  then click ***Continue***.
+ 
+   then click ***Continue***.
+
 3. For **Memory Size**, allocate ```1024 MB```, then ***Continue***.
+
 4. For the **Hard Drive**:
+
    A. Select ```Create a virtual hard drive now```, and ***Continue***.
+
    B. Select ```VDI (VirtualBox Disk Image)```, then ***Continue***.
+
    C. Set the hard drive to ```Dynamically allocated```, then ***Continue***.
+
    D. Keep the default name for the hard drive, allocate ```16.00 GB```, then ***Create***.
+
 5. On the VirtualBox dashboard, the ```lemon-trainer``` VM is now available and **Powered off**. Select and click ***Start***.
+
 6. The first screen will ask you to select an available disk image. Use the Finder/Explorer button to navigate to and select your downloaded Ubuntu ISO. Once selected, click ***Start***.
+
 7. Once booted up, click ***Install Ubuntu***.
+
    (*If you are unable to access the mouse pointer on the VirtualBox screen, click the mouse icon in the bottom right VirtualBox toolbar and click __Disable Mouse Integration__. You can now click into the Ubuntu screen to use the mouse. To escape the mouse back onto your native desktop, press the Host Key (noted in the bottom right VirtualBox toolbar). This will only be necessary until you've install VirtualBox Guest Additions.*)
+
 8. On the next screen, click ***Continue*** without selecting any additional options (we will get updates via the command line after installation is complete).
+
 9. Next, select ```Erase disk and install Ubuntu``` and click ***Install Now***. (*The "disk" to which Ubuntu is referring here is the virtual hard drive created in VirtualBox, not your actual hard drive. Likewise, click __Continue__ if you receive a pop-up message referring to partitions.*)
+
 10. Select your time zone, then click ***Continue***.
+
 11. Select your keyboard layout, then click ***Continue***.
+
 12. Enter your user credentials:
+
     A. ***Your name***, as in *First Last*,
+
     B. ***Your computer's name*** is ```lemon-a100```,
+
     C. ***Pick a username***,
+
     D. ***Choose a password*** and ***Confirm***,
+
     then click ***Continue***.
+
 13. Upon completed installation, click ***Restart Now***.
+
     (*The restart may halt with a prompt to "eject the installation media and press ENTER". Just press ```ENTER```.*)
 
 ---
@@ -59,12 +86,18 @@ Ubuntu is one of the most popular Linux distros available, with their Desktop OS
 ## Configure Ubuntu
 
 1. With restart completed, log in with your user credentials.
+
 2. Once logged in, click on the VirtualBox ***Devices*** dropdown menu, and click ***Insert Guest Additions CD image***.
+
    (*Guest Additions are VirtualBox utilities than enhance the VM's interactions with the host machine, your computer. For example, after Guest Additiona are installed, change settings in ```Shared Clipboard``` under the VirtualBox ***Devices*** dropdown to use cut/copy/paste between VM and host.*)
 3. On the CD pop-up, click ***Run***.
+
 4. When prompted, enter your system password to authenticate the installation.
+
 5. Press ```ENTER``` or ```RETURN``` when installation is complete.
+
 6. Right-click on the CD icon in the left sidebar menu (the "Launcher") to eject.
+
 7. Click the Ubuntu icon in the upper left of the the ***Launcher***, and search for ```Terminal```, then open.
 
 ### Apt-get
@@ -82,16 +115,18 @@ Ubuntu, as a variant of the Debian Linux distro, uses ```dpkg``` to manage packa
   ```
 
 3. We will next install git using ```apt-get``` and the ```install``` command:
-```
+  ```
   $ sudo apt-get install -y git
-```
-   The ```install``` subcommand takes directly-named packages (as known by their names in the apt-get sources list) as enough information to retrieve the package and install it onto the system.
-   The ```-y``` argument automatically applies "Yes" to the package installation. As seen with the previous command, ```apt-get``` prompts the user to confirm the size of the package to be installed.
+  ```
+  
+  The ```install``` subcommand takes directly-named packages (as known by their names in the apt-get sources list) as enough information to retrieve the package and install it onto the system.
+
+  The ```-y``` argument automatically applies "Yes" to the package installation. As seen with the previous command, ```apt-get``` prompts the user to confirm the size of the package to be installed.
 
 4. You can confirm a successful ```git``` installation with:
-```
+  ```
   $ git help
-```
+  ```
 
 ### Optional installations
 
