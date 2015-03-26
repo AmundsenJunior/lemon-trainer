@@ -6,7 +6,9 @@ In this tutorial, we will provide information on setting up your first virtual m
 ## Install VirtualBox
 
 1. Download the latest version for your operating system at:
+
    https://www.virtualbox.org/wiki/Downloads
+
 2. Install and open the application.
 
 VirtualBox is a VM manager, providing an interface for building and running numerous instances of VMs to run within your native OS. For new developers, this tool is often a great first way to gain exposure to the various distributions (*distros*) of Linux OS that are available. Refer to VirtualBox documentation for further information:
@@ -17,6 +19,7 @@ https://www.virtualbox.org/wiki/Documentation
 ## Download Ubuntu Desktop
 
 1. Download Ubuntu Desktop 14.04.2 LTS (64-bit)
+
    http://www.ubuntu.com/download/desktop
 
 Ubuntu is one of the most popular Linux distros available, with their Desktop OS providing plenty of features and applications for ordinary PC users, and their Server OS a great, reliable option for hosting web applications and services.
@@ -131,6 +134,7 @@ Ubuntu, as a variant of the Debian Linux distro, uses ```dpkg``` to manage packa
 ### Optional installations
 
 At this point, add any developer tools and applications as you prefer. I like to use the ```vim``` text editor and apply the Xubuntu minimal desktop environment (instead of the default Unity environment for Ubuntu). Get these packages with:
+
   ```
   $ sudo apt-get install -y vim xubuntu-desktop
   ```
