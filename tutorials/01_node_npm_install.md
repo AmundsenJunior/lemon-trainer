@@ -23,5 +23,5 @@ In this tutorial, we will install NodeJS, a server-side JavaScript web framework
    $ node -v
    ```
 
-   (* For more detail on this fix, read [this StackOverflow thread](http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu).*)
+   (*For more detail on this fix, read [this StackOverflow thread](http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu).*)
 
