@@ -25,8 +25,7 @@ app.get('/', function (req, res) {
 
 // Open profile page for selected user
 app.get('/users/:id', function (req, res) {
-    collection.findOne({ _id : req.params.id }, function (err, user) {
-        console.log(req.params.id, user);
+    collection.findOne({ "_id" : Number(req.params.id) }, function (err, user) {
         res.render('profile', { user : user });
     });
 });
