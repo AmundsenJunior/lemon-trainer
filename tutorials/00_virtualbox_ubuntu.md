@@ -135,9 +135,10 @@ Ubuntu, as a variant of the Debian Linux distro, uses ```dpkg``` to manage packa
 
 At this point, add any developer tools and applications as you prefer. I like to use the ```vim``` text editor and apply the Xubuntu minimal desktop environment (instead of the default Unity environment for Ubuntu). Get these packages with:
 
-  ```
-  $ sudo apt-get install -y vim xubuntu-desktop
-  ```
+```
+$ sudo apt-get install -y vim xubuntu-desktop
+```
+
 There are also Linux versions available for [Sublime Text](http://www.sublimetext.com/2) and [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html), per your preference.
 
 ---
