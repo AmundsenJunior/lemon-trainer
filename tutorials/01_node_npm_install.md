@@ -25,3 +25,4 @@ In this tutorial, we will install NodeJS, a server-side JavaScript web framework
 
    (*For more detail on this fix, read [this StackOverflow thread](http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu).*)
 
+(*For an in-depth tutorial on installing NodeJS, especially with methods alternative to those outlined above, I'll refer you to [this DigitalOcean tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server).*)
