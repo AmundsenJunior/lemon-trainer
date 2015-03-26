@@ -12,6 +12,7 @@ In this tutorial, we will provide information on setting up your first virtual m
 2. Install and open the application.
 
 VirtualBox is a VM manager, providing an interface for building and running numerous instances of VMs to run within your native OS. For new developers, this tool is often a great first way to gain exposure to the various distributions (*distros*) of Linux OS that are available. Refer to VirtualBox documentation for further information:
+
 https://www.virtualbox.org/wiki/Documentation
 
 ---
@@ -156,3 +157,13 @@ VirtualBox has snapshot and clone features, rather useful tools for backing up a
 4. Give the snapshot a name like ```base-install```, and list the relevant packages/tools/applications installed (e.g. "Git, Guest Additions"), then click ***OK***.
 
 5. On this screen, you can select a previous state and restore, delete, or clone.
+
+---
+
+## Add SSH Credentials to GitHub
+GitHub provides a solid article on [Generating SSH Keys](https://help.github.com/articles/generating-ssh-keys/) in order to communicate via SSH with GitHub.
+
+Under Step 4, be sure to provide a specific description that connects the SSH public key you've added to GitHub directly points to the ```lemon-a100``` VM you've created. If at any future point this VM is deleted, you'll know precisely which key to remove from your GitHub account.
+
+When cloning GitHub repos to your VM, be sure to use the "SSH clone URL", as this address is automatically assigned to your ```git remote origin```. They SSH public key you've added to GitHub won't work when pushing or pulling on a HTTPS ```origin``` URL.
+
