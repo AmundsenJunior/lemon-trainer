@@ -47,11 +47,13 @@ e.g., ```cat /etc/mongodb.conf``` goes into the ```etc/``` subdirectory of the r
   * a file or files,
   * within the current directory or from one location to another,
   * with the same file name or to a new name.
+
   ```
   $ cp 01_linux_bash.md 01_linux_bash.md.copy
   $ cp lemon-trainer/mongo_install.sh tutorials/
   $ mv tutorials/* ./
   ```
+  
   ```cp -R``` recognizes the ```-R``` recursive argument, and will apply the action on all subdirectories and files. 
 
 ```mkdir``` creates a new directory. If the directory doesn't yet exist, a ```cp``` or ```mv``` command will not work.
