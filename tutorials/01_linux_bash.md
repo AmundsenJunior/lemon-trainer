@@ -31,6 +31,7 @@ e.g., ```cat /etc/mongodb.conf``` goes into the ```etc/``` subdirectory of the r
 
 ```ls``` lists directory contents, both files and subdirectories.
   ```ls -a``` will list directory contents including hidden files.
+  ```ls -l``` will list additional information on the directory contents, including all read-write-execute permissions, user and group owners, and the last modified date and time.
 
 ```cd``` changes to the directory given.
   ```cd ~/workspace``` enters the ```workspace``` subdirectory of your user home directory. The tilde is short for the ```/var/username``` location.
@@ -80,27 +81,27 @@ e.g., ```cat /etc/mongodb.conf``` goes into the ```etc/``` subdirectory of the r
 
 ### Creating and writing to files
 
-```touch```
+```touch``` will update an existing file's last modified date and time, as visible with ```ls -l```. If the file does not exist, ```touch``` will create the file with the name given.
 
-```tee```
+```tee``` takes standard input (from executing other commands, e.g.) and writes them onto a file. Without any additional arguments, ```tee``` will overwrite the file contents. Use ```tee -a``` to append the input to the end of the selected file.
 
-```nano```
-
-```vim```
+```nano``` is a simple, minimal-function text editor that comes with your Linux installation. Use the direction keys to move the cursor, and refer to the function key commands listed at the bottom of the your Terminal window to save and exit.
 
 ### User and group permissions
 
-```whoami```
+```whoami``` shows the current active user.
 
-```sudo```
+```sudo``` is used generally to execute a command as another user. By default, it is used to execute commands as ```root``` user.
+  ***NOTE:*** Be cautious with this command, as it is very powerful with executing any command anywhere in the filesystem. If you unsuccessfully try to run a command as your normal user account, it is better practice to investigate why you don't have permission to run that command than to force the command through with ```sudo```.
 
-```chown```
+```chown``` uses a set of alphanumeric arguments to change user and group read-write-execute permissions on files and directories in the Linux filesystem. When viewing ```ls -l```, ```chown``` will act upon the set of "-rwx-" flags at the start of each line. These flags show whether the owner, group members, or all other users can Read, Write, or eXecute files and directories.
+  ***NOTE:*** Much as with ```sudo```, ```chown``` should be used with knowledgeable caution. Many files and directories (e.g., logs and config files) are acted upon by background processes that have permission from the specific ```chown``` settings that are present.
 
-```ls -l```
+### Linux and Bash Utilities
 
-### Utilizing the shell
+```export``` is used to create environment variables
 
-```export``` (environment variables)
+```echo```
 
 pipe |
 
@@ -112,5 +113,8 @@ help (-h or --help on some installed utilities/applications, with no arguments f
 
 ```man```
 
-```echo```
+```ps```
+
+```top```
+
 
