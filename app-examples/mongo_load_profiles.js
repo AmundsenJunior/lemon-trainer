@@ -13,7 +13,12 @@ var profilesArray = [
         "last" : "Russell"
       },
       "age" : 32,
-      "beer" : "Blue Point Toasted Lager"
+      "beer" : "Blue Point Toasted Lager",
+      "languages" : [
+        "English",
+        "French",
+        "German"
+      ]
     },
     { 
       "_id" : 2,
@@ -22,7 +27,13 @@ var profilesArray = [
         "last" : "Sampath"
       },
       "age" : 34,
-      "beer" : "Dale's Pale Ale"
+      "beer" : "Dale's Pale Ale",
+      "languages" : [
+        "Spanish",
+        "English",
+        "Russian",
+        "Hindi"
+      ]
     },
     { 
       "_id" : 3,
@@ -31,7 +42,13 @@ var profilesArray = [
         "last" : "Mansilla"
       },
       "age" :  25,
-      "beer" : "Guiness Draught Stout"
+      "beer" : "Guiness Draught Stout",
+      "languages" : [
+        "Spanish",
+        "English",
+        "Portuguese",
+        "Arabic"
+      ]
     },
     {
       "_id" : 4,
@@ -41,6 +58,11 @@ var profilesArray = [
       },
       "age" : 42,
       "beer" : "Allagash White"
+      "languages" : [
+        "English",
+        "Japanese",
+        "German"
+      ]
     }
 ];
 
