@@ -63,6 +63,20 @@ var profilesArray = [
         "Japanese",
         "German"
       ]
+    },
+    {
+      "_id" : 5,
+      "name" : {
+        "first" : "Chris",
+        "last" : "Impastato"
+      },
+      "age" : 25,
+      "beer" : "Two Roads Honeyspot Road White IPA",
+      "languages" : [
+        "English",
+        "Afrikaans",
+        "Swedish"
+      ]
     }
 ];
 
