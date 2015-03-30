@@ -15,7 +15,7 @@ Create a workspace directory, then clone this ```lemon-trainer``` repository fro
 ```
 $ mkdir ~/workspace
 $ cd ~/workspace
-$ git clone https://github.com/AmundsenJunior/lemon-trainer.git
+$ git clone git@github.com:AmundsenJunior/lemon-trainer.git
 $ cd lemon-trainer
 ```
 
