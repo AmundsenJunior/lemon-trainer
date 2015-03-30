@@ -18,7 +18,7 @@ var collection = db.collection('profiles');
 
 // Open index list page of all users
 app.get('/', function (req, res) {
-    collection.find({}).toArray(function (err, users) {
+    collection.find({}, {"_id" : 1, "name" : 1}).toArray(function (err, users) {
         res.render('index', { users : users });
     });
 });

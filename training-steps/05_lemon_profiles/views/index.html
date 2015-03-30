@@ -1,3 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block title %}A100 User Profiles{% endblock %}
+
+{% block content %}
+
 <h1>Welcome to A100 User Profiles</h1>
 
 <h2>View a Profile</h2>
@@ -7,3 +13,4 @@
     {% if loop.last %}</ul>{% endif %}
 {% endfor %}
 
+{% endblock %}
