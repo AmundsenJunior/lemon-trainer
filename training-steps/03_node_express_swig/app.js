@@ -7,11 +7,11 @@ app.set('view engine', 'html');
 app.set('views', __dirname + "/views");
 
 app.get('/', function (req, res) {
-    res.render('hello', { 'name' : 'Swig' });
+    res.render('index', { 'name' : 'Swig' });
 });
 
 app.get('/user/:name', function (req, res) {
-    res.render('hello', { 'name' : req.params.name });
+    res.render('index', { 'name' : req.params.name });
 });
 
 app.get('*', function (req, res) {
@@ -19,5 +19,5 @@ app.get('*', function (req, res) {
 });
 
 app.listen(8080);
-console.log("Express server started on port 8080");
+console.log("Server running at http://localhost:8080");
 

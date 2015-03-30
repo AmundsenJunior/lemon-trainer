@@ -1,0 +1,9 @@
+<h1>Welcome to A100 User Profiles</h1>
+
+<h2>View a Profile</h2>
+{% for user in users %}
+    {% if loop.first %}<ul>{% endif %}
+    <li><a href="/users/{{user._id}}">{{user.name.first}} {{user.name.last}}</a></li>
+    {% if loop.last %}</ul>{% endif %}
+{% endfor %}
+
