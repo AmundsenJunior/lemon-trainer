@@ -59,22 +59,29 @@ $ sudo apt-get autoremove
 MongoDB can run in two modes:
 
 1. As a service/daemon in the background, ```mongodb```:
+ 
    ```
    $ sudo service mongodb start
    $ sudo service mongodb stop
    $ sudo service mongodb restart
    $ sudo service mongodb status
    ```
+
 2. As a shell program, visible in Terminal, ```mongod```
+
    ```
    $ sudo mongod --dbpath /var/lib/mongodb
    ```
+
    (```mongod``` refers to ```/data/db``` location for the datastore by default. To stop the process running in the shell, press *CTRL+C*.)
+
 3. Only one process can run at a specific time.
    In both cases, they are active upon the following data and log locations:
    config = ```/etc/mongodb.conf```,
    dbpath = ```/var/lib/mongodb```,
    logpath = ```/var/log/mongodb/mongodb.log```
+
 4. The log will write to both your terminal and logpath when 'mongod' is running.
+
 5. In either case, you can access the db from the shell with 'mongo' interactive prompt. If running 'mongod' in Terminal, open a new tab to then run 'mongo' or other shell commands.
 
