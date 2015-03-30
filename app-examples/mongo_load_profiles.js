@@ -57,7 +57,7 @@ var profilesArray = [
         "last" : "Koch"
       },
       "age" : 42,
-      "beer" : "Allagash White"
+      "beer" : "Allagash White",
       "languages" : [
         "English",
         "Japanese",
