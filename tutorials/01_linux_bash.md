@@ -99,22 +99,39 @@ e.g., ```cat /etc/mongodb.conf``` goes into the ```etc/``` subdirectory of the r
 
 ### Linux and Bash Utilities
 
-```export``` is used to create environment variables
+```export``` is used to create environment variables, which can be used both by a user on the Linux Terminal, as well as by processes running on the system.
 
-```echo```
+pipe ```|``` strings commands together, where the output of the first command will be used as input into the second command.
 
-pipe |
+redirection ```>``` is used to write the output of a command into a file.
 
-redirection < and >
+Combining piping and redirection, we can run a command to view all running processes, run those through a search filter, then write the output of that filter to a text file:
+```
+$ ps aux | grep mongo > mongo-status.txt
+```
 
-tab completion
+Tab completion is handy shortcut in Bash to automatically finish typing a command, directory path, or filename for you, if and when the initial characters you've entered leave only one result possible.
 
-help (-h or --help on some installed utilities/applications, with no arguments for Bash commands)
+For example, if you are in the ```workspace``` directory created earlier, you can ```cat``` this tutorial with tab completion very quickly (press *TAB* when noted, then type until the next "<TAB>"):
+```
+$ cat lem<TAB>
+$ cat lemon-trainer/tu<TAB>
+$ cat lemon-trainer/tutorials/01<TAB>
+$ cat lemon-trainer/tutorials/01_linux_bash.md
+```
 
-```man```
+Help is provided directly in Bash on the syntax for many installed utilities and applicaions. Type the command immediately followed by ```-h``` or ```--help``` to display a description of the command and its arguments. If that doesn't work, in some cases, you can enter the command with no arguments to display the help description.
 
-```ps```
+To go much more in-depth, ```man``` provides the verbose documentation for Linux and Bash commands, functions and files:
+```
+$ man git
+```
 
-```top```
+```ps``` displays the current running processes on the system.
+
+```echo``` will print to standard output.
+```
+$ echo 'Hello world'
+```
 
 
