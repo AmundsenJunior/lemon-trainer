@@ -2,9 +2,12 @@
 conn = new Mongo();
 db = conn.getDB("lemon-trainer");
 
-// Load values for app_array.js
+// Load user profile values
 db.createCollection("profiles");
 var dbcoll = db.getCollection("profiles");
+
+// the highest _id value here should match the seq value
+// in countersArray in mongo_load_counters.js
 var profilesArray = [ 
     { 
       "_id" : 1,
@@ -83,5 +86,4 @@ var profilesArray = [
 for (index in profilesArray) {    
     dbcoll.insert(profilesArray[index]);
 };
-
-
+ 
