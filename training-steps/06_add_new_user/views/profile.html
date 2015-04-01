@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{user.name.first}} {{user.name.last}} Profile Page{% endblock %}
+
+{% block content %}
+
+<h1>Profile of {{user.name.first}} {{user.name.last}}</h1>
+
+<p>{{user.name.first}} {{user.name.last}} is {{user.age}} years old and likes to drink {{user.beer}}.</p>
+
+<h3><a href='/'>Return to Index</a></h3>
+
+{% endblock %}
+
