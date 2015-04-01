@@ -23,16 +23,16 @@ app.get('/', function (req, res) {
     });
 });
 
+// Open add new user page
+app.get('/users/add_new_user', function (req, res) {
+    res.render('new_user', { title : "Add a New A100 User Profile" });
+});
+
 // Open profile page for selected user
 app.get('/users/:id', function (req, res) {
     collection.findOne({ "_id" : Number(req.params.id) }, function (err, user) {
         res.render('profile', { user : user });
     });
-});
-
-// Open add new user page
-app.get('/users/add_new_user', function (req, res) {
-    res.render('new_user', { title : "Add a New A100 User Profile" });
 });
 
 // Page not found
