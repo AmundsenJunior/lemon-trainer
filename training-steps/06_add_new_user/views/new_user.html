@@ -6,11 +6,13 @@
 
 <h1>{{title}}</h1>
 
-<h2>View a Profile</h2>
-{% for user in users %}
-    {% if loop.first %}<ul>{% endif %}
-    <li><a href="/users/{{user._id}}">{{user.name.first}} {{user.name.last}}</a></li>
-    {% if loop.last %}</ul>{% endif %}
+<form method="POST">
+{% for field in fields %}
+    {% if field.type != "hidden" %}
+        <span><input type={{field.type}} name={{ field.name }}</span>
+    {% endif %}
+    {% if loop.last %}<input type="submit" value="Add User">{% endif %}
 {% endfor %}
+</form>
 
 {% endblock %}

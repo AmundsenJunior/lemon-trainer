@@ -34,6 +34,7 @@ app.get('/users/add_new_user', function (req, res) {
             title : "Add a New A100 User Profile",
             fields : fields.fields
         });
+    console.log(fields.name);
     console.log(fields.fields);
     });
 });
