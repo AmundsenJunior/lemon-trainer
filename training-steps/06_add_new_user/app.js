@@ -15,7 +15,6 @@ var mongoclient = new MongoClient(new Server('localhost', 27017,
                                              { 'native_parser' : true }));
 var db = mongoclient.db('lemon-trainer');
 
-
 // Set calls to collections
 var profiles = db.collection('profiles');
 var counters = db.collection('counters');
@@ -30,11 +29,12 @@ app.get('/', function (req, res) {
 
 // Open add new user page
 app.get('/users/add_new_user', function (req, res) {
-    schemas.find({"collection" : "profiles"}).toArray(function (err, fields) {
+    schemas.findOne({"collection" : "profiles"}, {fields : {"_id" : 0, "fields" : 1}}, function (err, fields) {
         res.render('new_user', { 
             title : "Add a New A100 User Profile",
-            fields : fields
+            fields : fields.fields
         });
+    console.log(fields.fields);
     });
 });
 

@@ -11,54 +11,48 @@ var schemasArray = [
       "collection" : "profiles",
       "fields" : [
         {
-          "_id" : {
-            "type" : "hidden"
-          }
+          "name" : "_id",
+          "type" : "hidden"
         },
         {
-          "name" : [
+          "name" : "name",
+          "structure" : "subdocs",
+          "subdocs" : [
             {
-              "first" : {
-                "type" : "text"
-              }
+              "name" : "first",
+              "type" : "text"
             },
             {
-              "last" : {
-                "type" : "text"
-              }
+              "name" : "last",
+              "type" : "text"
             }
           ]
         },
         {
-          "age" : {
-            "type" : "number"
-          }
+          "name" : "age",
+          "type" : "number"
         },
         {
-          "beer" : {
-            "type" : "text"
-          }
+          "name" : "beer",
+          "type" : "text"
         },
         {
-          "languages" : {
-            "structure" : "array",
-            "type" : "text"
-          }
+          "name" : "languages",
+          "structure" : "array",
+          "type" : "text"
         }
-      ] 
+      ]
     },
     {
       "collection" : "counters",
       "fields" : [
         {
-          "name" : {
-            "type" : "text"
-          }
+          "name" : "name",
+          "type" : "text"
         },
         {
-          "seq" : {
-            "type" : "text"
-          }
+          "name" : "seq",
+          "type" : "text"
         }
       ]
     }
