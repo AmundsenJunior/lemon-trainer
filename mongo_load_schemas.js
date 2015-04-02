@@ -10,23 +10,56 @@ var schemasArray = [
     {
       "collection" : "profiles",
       "fields" : [
-        "_id",
+        {
+          "_id" : {
+            "type" : "hidden"
+          }
+        },
         {
           "name" : [
-            "first",
-            "last"
+            {
+              "first" : {
+                "type" : "text"
+              }
+            },
+            {
+              "last" : {
+                "type" : "text"
+              }
+            }
           ]
         },
-        "age",
-        "beer",
-        "languages"
+        {
+          "age" : {
+            "type" : "number"
+          }
+        },
+        {
+          "beer" : {
+            "type" : "text"
+          }
+        },
+        {
+          "languages" : {
+            "structure" : "array",
+            "type" : "text"
+          }
+        }
       ] 
     },
     {
       "collection" : "counters",
       "fields" : [
-        "name",
-        "seq"
+        {
+          "name" : {
+            "type" : "text"
+          }
+        },
+        {
+          "seq" : {
+            "type" : "text"
+          }
+        }
       ]
     }
 ];
