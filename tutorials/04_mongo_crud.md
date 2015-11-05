@@ -27,14 +27,14 @@ $ mongo
   dbcoll.find()
   ```
 
-#### Finds first document in collection
-  ```
-  dbcoll.findOne()
-  ```
-
 #### Displays clean JSON formatted results
   ```
-  dbcoll.findOne().pretty()
+  dbcoll.find().pretty()
+  ```
+
+#### Finds first document in collection (automatically displays in "pretty" mode, as above)
+  ```
+  dbcoll.findOne()
   ```
 
 #### Find first match on query with equality condition
